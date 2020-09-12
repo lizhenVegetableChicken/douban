@@ -1,0 +1,44 @@
+@import "../common.scss";
+
+.main {
+  display: block;
+  margin: 1230px;
+}
+
+//.main .collections {
+//  display: flex;
+//  margin: 0 auto;
+//  flex-wrap: wrap;
+//  width: 1130px;
+//  .collection {
+//    flex: none;
+//    width: calc(100% / 5);
+//    box-sizing: border-box;
+//    padding: 0 38px;
+//    border-bottom: 1px solid #EAEAEA;
+//    margin-bottom: 40px;
+//    img {
+//      @include square(150px);
+//      margin-bottom: 20px;
+//    }
+//    .name {
+//      @include font(16px,20px);
+//      margin-bottom: 5px;
+//    }
+//    .master {
+//      margin-bottom: 10px;
+//      span {
+//        @include font(12px,17px,left,#919191);
+//      }
+//    }
+//    .songs {
+//      list-style: none;
+//      margin-bottom: 6px;
+//      padding-inline-start: 0;
+//      .song {
+//        @include font(12px,17px,left,#919191);
+//        margin-bottom: 4px;
+//      }
+//    }
+//  }
+//}

@@ -1,0 +1,72 @@
+@import "../common.scss";
+
+.search-main {
+  box-sizing: border-box;
+  margin: 20px auto;
+  width: 666px;
+  .form {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    .search input {
+      box-shadow: 0 0 2px 2px rgba(0,0,0,0.05);
+      outline: none;
+      @include square(100%, 50px);
+      box-sizing: border-box;
+      border: 1px solid #E6E6E6;
+      //border-radius: 50px;
+      padding: 0 68px;
+      @include font(14px,50px,left,#969696);
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      @include square(18px);
+      top: 17px;
+      left: 30px;
+      @include background("search");
+    }
+  }
+  .guide {
+    width: 100%;
+    margin-bottom: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      display: block;
+      box-shadow: 0 4px 3px 3px rgba(0,0,0,0.1);
+      @include font(12px, 28px, center);
+      @include square(40px, 28px);
+      border-radius: 10px;
+      margin: 20px auto;
+      cursor: pointer;
+    }
+  }
+  .results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    @include font(18px, 50px, center, red);
+    .single {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #d1d1d1;
+      img {
+        @include square(50px, 50px);
+        margin-right: 10px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      .name {
+        @include font(18px, 50px);
+      }
+    }
+  }
+}

@@ -1,0 +1,719 @@
+@charset "UTF-8";
+.share-body {
+  width: 100px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.07);
+}
+.share-body .text {
+  margin-top: 10px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.share-body #qrcode {
+  width: 78px;
+  height: 78px;
+  margin-top: 2px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  font-family: PingFang SC;
+}
+
+.container {
+  /*position:sticky;*/
+  width: 100%;
+  height: 692px;
+  display: flex;
+  padding: 0 0 0 243px;
+  box-sizing: border-box;
+  background: rgba(250, 250, 250, 0.93);
+}
+.container .QR {
+  width: 78px;
+  margin-right: 65px;
+}
+.container .QR .pic {
+  width: 78px;
+  height: 78px;
+  margin-top: 192px;
+  margin-bottom: 5px;
+  background: url(/images/qr.png) no-repeat center/contain;
+}
+.container .QR p {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: #979797;
+  text-align: center;
+  font-weight: 200;
+}
+.container .share-page {
+  right: 600px;
+  top: 100px;
+}
+.container .main .mhz-name {
+  margin-top: 114px;
+  margin-left: -17px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2F9842;
+  text-align: left;
+}
+.container .main .mhz-name::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 9px;
+  height: 10px;
+  background: url(/images/Union.png) no-repeat center/contain;
+}
+.container .main .mhz-name::after {
+  content: "";
+  display: inline-block;
+  margin-left: 15px;
+  width: 8px;
+  height: 15px;
+  background: url(/images/updown.png) no-repeat center/contain;
+}
+.container .main .title {
+  margin-top: 60px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  text-align: left;
+}
+.container .main .song-artist {
+  margin-top: 10px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #7E7E7E;
+  text-align: left;
+}
+.container .main .play {
+  margin-top: 15px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #E9E9E9;
+}
+.container .main .play .left .time {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: #7E7E7E;
+  text-align: left;
+  margin-right: 10px;
+}
+.container .main .play .left .voice {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  background: url(/images/voice.png) no-repeat center/contain;
+}
+.container .main .play .right {
+  margin-top: -1px;
+}
+.container .main .play .right .pic {
+  display: inline-block;
+  margin-left: 34px;
+  width: 18px;
+  height: 15px;
+}
+.container .main .play .right .p1 {
+  background: url(/images/words.png) no-repeat center/contain;
+}
+.container .main .play .right .p2 {
+  background: url(/images/download.png) no-repeat center/contain;
+}
+.container .main .play .right .p3 {
+  background: url(/images/share.png) no-repeat center/contain;
+  cursor: pointer;
+}
+.container .main .keys {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .keys .pic1 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.container .main .keys .pic2 {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+.container .main .keys .left {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .keys .left .p1 {
+  background: url(/images/heart.png) no-repeat center/contain;
+  margin-right: 40px;
+}
+.container .main .keys .left .p2 {
+  background: url(/images/delete.png) no-repeat center/contain;
+}
+.container .main .keys .mid {
+  width: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -100px;
+}
+.container .main .keys .mid .p3 {
+  background: url(/images/list.png) no-repeat center/contain;
+  margin-right: 20px;
+}
+.container .main .keys .mid .p4 {
+  background: url(/images/random.png) no-repeat center/contain;
+}
+.container .main .keys .right {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .keys .right .p5 {
+  background: url(/images/last.png) no-repeat center/contain;
+  margin-right: 20px;
+}
+.container .main .keys .right .p6 {
+  background: url(/images/start.png) no-repeat center/contain;
+}
+.container .main .keys .right .p7 {
+  background: url(/images/next.png) no-repeat center/contain;
+}
+.container .main .intro {
+  margin-top: 60px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  background: #EDEDED;
+  text-align: center;
+}
+.container .main .intro span {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000000;
+  text-align: left;
+}
+.container .main .intro span.green {
+  color: #2F9842;
+}
+.container .singer-picture {
+  margin-top: 160px;
+  margin-left: 60px;
+  width: 257.5px;
+  height: 257.5px;
+  border-radius: 50%;
+}
+
+.main {
+  display: block;
+}
+.main .mhz-line {
+  margin-left: 240px;
+  width: 960px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.main .mhz-line .pic {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.main .mhz-line .pic.private {
+  background: url(/images/muselect.png) no-repeat center/contain;
+}
+.main .mhz-line .pic.mine {
+  background: url(/images/select.png) no-repeat center/contain;
+}
+.main .mhz-line .text {
+  position: relative;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  text-align: left;
+  color: #000000;
+  margin-right: 55px;
+}
+.main .mhz-line .text .open {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2F9842;
+  text-align: center;
+  width: 80px;
+  height: 24px;
+  border: 1px solid #7ac989;
+  border-radius: 12px;
+}
+.main .mhz-line .text .intro {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #BCBBBB;
+  text-align: left;
+}
+.main .artists {
+  width: 1040px;
+  margin: 0 auto;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #A6A6A6;
+  text-align: left;
+}
+.main .artists .title {
+  margin-bottom: 10px;
+}
+.main .artists .title .pic {
+  display: inline-block;
+  width: 15px;
+  height: 17px;
+  margin-left: 10px;
+  background: url(/images/artist.png) no-repeat center/contain;
+}
+.main .artists .artistDatas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .artists .artistDatas .artistData {
+  width: 208px;
+  height: 267px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main .artists .artistDatas .artistData img, .main .artists .artistDatas .artistData .cover {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.main .artists .artistDatas .artistData .cover {
+  position: absolute;
+  left: 44px;
+}
+.main .artists .artistDatas .artistData .cover:hover .cb {
+  display: block !important;
+}
+.main .artists .artistDatas .artistData .cover .cb {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+}
+.main .artists .artistDatas .artistData .cover .cb .pic {
+  position: absolute;
+  background: url(/images/Polygon2.png) no-repeat center/contain;
+  top: 48px;
+  left: 51px;
+  width: 24px;
+  height: 18px;
+}
+.main .artists .artistDatas .artistData .name {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.main .artists .artistDatas .artistData .intro {
+  width: 150px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 17px;
+  color: #B0B0B0;
+}
+.main .more {
+  width: 110px;
+  height: 25px;
+  margin: 40px auto;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 25px;
+  color: #AEAEAE;
+  text-align: center;
+  border: 1px solid #E0E0E0;
+  cursor: pointer;
+}
+.main .mhzViewModels {
+  width: 1040px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #A6A6A6;
+  text-align: center;
+}
+.main .mhzViewModels .title {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main .mhzViewModels .mhzs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .mhzViewModels .mhzs .mhz {
+  width: 208px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main .mhzViewModels .mhzs .mhz .mhzName {
+  font-size: 14px;
+  color: #1C1C1C;
+}
+
+.main .collections {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 1130px;
+}
+.main .collections .collection {
+  flex: none;
+  width: calc(100% / 5);
+  box-sizing: border-box;
+  padding: 0 38px;
+  border-bottom: 1px solid #EAEAEA;
+  margin-bottom: 40px;
+}
+.main .collections .collection img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.main .collections .collection .name {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.main .collections .collection .master {
+  margin-bottom: 10px;
+}
+.main .collections .collection .master span {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #919191;
+  text-align: left;
+}
+.main .collections .collection .songs {
+  list-style: none;
+  margin-bottom: 6px;
+  padding-inline-start: 0;
+}
+.main .collections .collection .songs .song {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #919191;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.search-main {
+  box-sizing: border-box;
+  margin: 20px auto;
+  width: 666px;
+}
+.search-main .form {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+}
+.search-main .form .search input {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #E6E6E6;
+  padding: 0 68px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 50px;
+  color: #969696;
+  text-align: left;
+}
+.search-main .form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  top: 17px;
+  left: 30px;
+  background: url(/images/search.png) no-repeat center/contain;
+}
+.search-main .guide {
+  width: 100%;
+  margin-bottom: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-main .guide span {
+  display: block;
+  box-shadow: 0 4px 3px 3px rgba(0, 0, 0, 0.1);
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 28px;
+  color: #000000;
+  text-align: center;
+  width: 40px;
+  height: 28px;
+  border-radius: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.search-main .results {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 50px;
+  color: red;
+  text-align: center;
+}
+.search-main .results .single {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d1d1d1;
+}
+.search-main .results .single img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.search-main .results .single .name {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 50px;
+  color: #000000;
+  text-align: left;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: PingFang SC;
+}
+
+header {
+  width: 100%;
+  height: 92px;
+  background: rgba(250, 250, 250, 0.93);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+  box-sizing: border-box;
+}
+header .logo {
+  height: 32px;
+  width: 80px;
+  margin-right: -750px;
+  background: url(/images/logo.png) no-repeat center/contain;
+}
+header .text {
+  text-align: center;
+  line-height: 17px;
+  font-size: 12px;
+  color: #B3B3B3;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  margin-bottom: 45px;
+  margin-top: 80px;
+}
+footer .bottom {
+  padding: 0;
+  width: 100%;
+  height: 91px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .bottom div {
+  padding: 0;
+  text-align: center;
+}
+footer .bottom div span {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #A3A3A3;
+}
+footer .bottom div span a {
+  text-decoration: none #A3A3A3;
+}
+footer .bottom div span:last-child {
+  color: #262626;
+}
+
+.guide {
+  width: 345px;
+  height: 105px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.guide div {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #979797;
+  text-align: center;
+  cursor: pointer;
+}
+.guide div.mhz {
+  color: #2F9842;
+}
+.guide div.mhz .pic {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(/images/mhz.png) no-repeat center/contain;
+}
+.guide div.col .pic {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  background: url(/images/col.png) no-repeat center/contain;
+}
+.guide div.my .pic {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  margin-right: 5px;
+  background: url(/images/mine.png) no-repeat center/contain;
+}
+.guide div.ser {
+  margin-right: 0;
+}
+.guide div.ser .pic {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background: url(/images/search.png) no-repeat center/contain;
+}
+
+/*# sourceMappingURL=index.css.map */

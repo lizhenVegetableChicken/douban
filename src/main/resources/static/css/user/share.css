@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.share-body {
+  width: 100px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #9A9A9A;
+  border: 1px solid #2F9842;
+}
+.share-body .text {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.share-body #qrcode {
+  width: 75px;
+  height: 75px;
+}
+
+/*# sourceMappingURL=share.css.map */

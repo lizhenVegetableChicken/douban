@@ -1,0 +1,74 @@
+@import "../common.scss";
+.search-main {
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+  border-radius: 50px;
+  width: 1040px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 213px 100px 30px;
+  .return {
+    z-index: 1;
+    position: absolute;
+    top: 228px;
+    right: 100px;
+    cursor: pointer;
+    @include font(14px,20px,center,#000000);
+  }
+  .form {
+    position: relative;
+    width: 100%;
+    .search input {
+      box-shadow: 0 0 2px 2px rgba(0,0,0,0.05);
+      outline: none;
+      @include square(788px, 50px);
+      box-sizing: border-box;
+      border: 1px solid #E6E6E6;
+      border-radius: 50px;
+      padding: 0 58px;
+      @include font(14px,50px,left,#969696);
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      @include square(18px);
+      top: 17px;
+      left: 30px;
+      @include background("search");
+    }
+  }
+  .results {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    span {
+      @include font(14px,20px,center,red);
+    }
+    .singer {
+      width: 100px;
+      margin: 0 20px;
+      img {
+        @include circle(100px);
+        margin-bottom: 20px;
+      }
+      .name {
+        @include font(14px,20px,center,#000000);
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .clickmore {
+    box-shadow: 0 4px 3px 3px rgba(0,0,0,0.1);
+    @include font(12px, 28px, center);
+    @include square(80px, 28px);
+    border-radius: 10px;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+}

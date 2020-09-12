@@ -1,0 +1,160 @@
+@import "../common.scss";
+
+.userguide-main {
+  position: relative;
+  box-sizing: border-box;
+  width: 1040px;
+  margin: 0 auto;
+  padding: 110px 140px 0px;
+  .title {
+    width: 600px;
+    margin: 0 auto;
+    @include font(30px, 42px, center, #000);
+  }
+  .small {
+    position: absolute;
+    right: 48px;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    @include font(12px, 17px, left, #2F9842);
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 7px;
+      @include square(8px, 13px);
+      @include background("Vector");
+    }
+  }
+  .singers {
+    margin-top: 60px;
+    width: 820px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .singer {
+      position: relative;
+      margin-bottom: 30px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 160px;
+      img {
+        @include square(100px);
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      .name {
+        margin-bottom: 10px;
+        @include font(12px, 17px, center, #000);
+      }
+      .like-btn {
+        @include square(40px, 20px);
+        border-radius: 2px;
+        @include font(12px, 20px, center, #FF4874);
+        border: 1px solid #FF4874;
+        cursor: pointer;
+        transition: .25s;
+        &:hover {
+          color: white !important;
+          background: #FF4874 !important;
+          transition: .25s;
+        }
+      }
+      .red {
+        display: none;
+        position:absolute;
+        @include square(100px);
+        border-radius:50%;
+        background: #FF6C6A;
+        opacity: 0.8;
+        &::after {
+          content: "";
+          @include square(30px, 22px);
+          position: absolute;
+          right: 35px;
+          top: 39px;
+          @include background("choosen");
+        }
+      }
+    }
+  }
+  .options {
+    margin: 20px auto;
+    @include square(140px, 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      @include font;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        color: #2F9842;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 5px;
+        @include square(14px, 13px);
+      }
+      &.change::before {
+        @include background("change");
+      }
+      &.search::before {
+        @include background("search");
+      }
+    }
+  }
+  .selected {
+    margin: 10px auto;
+    @include square(300px, 55px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .p {
+      position: relative;
+      @include square(50px);
+      border-radius: 50%;
+      cursor: not-allowed;
+      @include background("avatar");
+      .red {
+        content: "";
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        @include square(100%);
+        border-radius:50%;
+        background: #FF6C6A;
+        opacity: 0.8;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          @include square(12px);
+          left: 19px;
+          top: 19px;
+          @include background("del");
+        }
+      }
+    }
+  }
+  .skip {
+    width: 100%;
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: center;
+    height: 17px;
+    @include font(12px, 17px, left, #AEAEAE);
+    &::after {
+      content: "";
+      margin-left: 7px;
+      display: inline-block;
+      @include square(18px, 13px);
+      @include background("Vector2");
+    }
+  }
+}

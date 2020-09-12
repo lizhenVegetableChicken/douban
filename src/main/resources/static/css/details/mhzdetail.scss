@@ -1,0 +1,122 @@
+@import "../layout.scss";
+@import "../common.scss";
+@import "../user/share.scss";
+
+.mhz-main {
+  position: relative;
+  box-sizing: border-box;
+  width: 786px;
+  margin: 171px auto;
+  padding: 50px 107px;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+
+  .share {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    @include font(14px, 20px, #9A9A9A);
+    &::before {
+      content: "";
+      display: inline-block;
+      @include square(12px, 14px);
+      background: url(/images/share.png) no-repeat center / contain;
+      margin-right: 10px;
+    }
+  }
+  .return {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    cursor: pointer;
+    @include font(14px, 20px, #9A9A9A);
+  }
+  .share-page {
+    top: 20px;
+    right: 120px;
+  }
+  .subject {
+    width: 100%;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #EAEAEA;
+
+    img {
+      @include circle(200px);
+      margin: 0 auto 30px;
+    }
+
+    .name {
+      @include font(30px, 42px, center);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .like-btn {
+      width: 77px;
+      @include font(12px, 17px,center, #C5C5C5);
+      text-align: center;
+      border: 1px solid #C5C5C5;
+      cursor: pointer;
+    }
+  }
+
+  .songs {
+    width: 100%;
+    padding: 40px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #EAEAEA;
+    @include title();
+
+    .song {
+      display: flex;
+      align-items: center;
+      height: 20px;
+      margin-bottom: 12px;
+
+      img {
+        @include square(20px, 20px);
+        margin-right: 10px;
+      }
+
+      .name {
+        @include font(12px, 17px);
+      }
+    }
+
+    .more {
+      cursor: pointer;
+      @include font(12px, 17px, left, #AFAFAF);
+    }
+  }
+  .simSingers {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 0;
+    @include title();
+    .intro {
+      @include font(12px, 17px, left, #AFAFAF);
+      margin-bottom: 76px;
+    }
+    .singers {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      .singer {
+        width: 100px;
+        margin-right: 42px;
+        img {
+          @include circle(100px);
+          margin-bottom: 20px;
+        }
+        .name {
+          @include font(14px,20px,center,#000000);
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}

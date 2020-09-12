@@ -1,0 +1,180 @@
+@import "../common.scss";
+@import "../user/share.scss";
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  font-family: PingFang SC;
+}
+.container {
+  @include square(100%,692px);
+  position: fixed;
+  display: flex;
+  padding: 0 0 0 243px;
+  box-sizing: border-box;
+  background: rgba(250,250,250,0.93);
+  .QR {
+    width: 78px;
+    margin-right: 65px;
+    .pic {
+      @include square(78px);
+      margin-top: 192px;
+      margin-bottom: 5px;
+      @include background("qr");
+    }
+    p {
+      @include font(10px, 14px, center, #979797);
+      font-weight: 200;
+    }
+  }
+  .share-page {
+    right: 600px;
+    top: 100px;
+  }
+  .main {
+    .mhz-name {
+      margin-top: 114px;
+      margin-left: -17px;
+      @include font(16px, 22px, left, #2F9842);
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 10px;
+        @include square(9px, 10px);
+        background: url(/images/Union.png) no-repeat center / contain;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 15px;
+        @include square(8px, 15px);
+        background: url(/images/updown.png) no-repeat center / contain;
+      }
+    }
+    .title {
+      margin-top: 60px;
+      @include font(20px, 28px);
+    }
+    .song-artist {
+      margin-top: 10px;
+      @include font(12px,17px,left,#7E7E7E);
+    }
+    .play {
+      margin-top: 15px;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #E9E9E9;
+      .left {
+        .time {
+          @include font(10px,14px,left,#7E7E7E);
+          margin-right: 10px;
+        }
+        .voice {
+          display: inline-block;
+          @include square(12px, 10px);
+          background: url(/images/voice.png) no-repeat center / contain;
+        }
+      }
+      .right {
+        margin-top: -1px;
+        .pic {
+          display: inline-block;
+          margin-left: 34px;
+          @include square(18px, 15px);
+        }
+        .p1 {
+          background: url(/images/words.png) no-repeat center / contain;
+        }
+        .p2 {
+          background: url(/images/download.png) no-repeat center / contain;
+        }
+        .p3 {
+          background: url(/images/share.png) no-repeat center / contain;
+          cursor: pointer;
+        }
+      }
+    }
+    .keys {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .pic1 {
+        display: inline-block;
+        @include square(30px);
+      }
+      .pic2 {
+        display: inline-block;
+        @include square(14px);
+      }
+      .left {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .p1 {
+          background: url(/images/heart.png) no-repeat center / contain;
+          margin-right: 40px;
+        }
+        .p2 {
+          background: url(/images/delete.png) no-repeat center / contain;
+        }
+      }
+      .mid {
+        width: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: -100px;
+        .p3 {
+          background: url(/images/list.png) no-repeat center / contain;
+          margin-right: 20px;
+        }
+        .p4 {
+          background: url(/images/random.png) no-repeat center / contain;
+        }
+      }
+      .right {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .p5 {
+          background: url(/images/last.png) no-repeat center / contain;
+          margin-right: 20px;
+        }
+        .p6 {
+          background: url(/images/start.png) no-repeat center / contain;
+        }
+        .p7 {
+          background: url(/images/next.png) no-repeat center / contain;
+        }
+      }
+    }
+    .intro {
+      margin-top: 60px;
+      padding-top: 7px;
+      box-sizing: border-box;
+      @include square(300px, 30px);
+      background: #EDEDED;
+      text-align: center;
+      span {
+        @include font;
+        &.green {
+          color: #2F9842;
+        }
+      }
+    }
+  }
+  .singer-picture {
+    margin-top: 160px;
+    margin-left: 60px;
+    @include square(257.5px);
+    border-radius: 50%;
+  }
+}
+

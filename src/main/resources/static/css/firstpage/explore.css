@@ -1,0 +1,191 @@
+@charset "UTF-8";
+.main {
+  display: block;
+}
+.main .mhz-line {
+  margin-left: 240px;
+  height: 120px;
+  width: 860px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .mhz-line .pic {
+  height: 40px;
+  width: 40px;
+  margin-right: -100px;
+}
+.main .mhz-line .pic.private {
+  background: url(/images/muselect.png) no-repeat center/contain;
+}
+.main .mhz-line .pic.mine {
+  background: url(/images/select.png) no-repeat center/contain;
+}
+.main .mhz-line .text {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000000;
+}
+.main .mhz-line .text .intro {
+  color: #BCBBBB;
+}
+.main .artists {
+  width: 1040px;
+  margin: 0 auto;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  color: #A6A6A6;
+}
+.main .artists .title {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.main .artists .title .pic {
+  display: inline-block;
+  height: 17px;
+  width: 15px;
+  margin-left: 10px;
+  background: url(/images/artist.png) no-repeat center/contain;
+}
+.main .artists .artistDatas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .artists .artistDatas .artistData {
+  height: 267px;
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main .artists .artistDatas .artistData img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.main .artists .artistDatas .artistData .name {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.main .artists .artistDatas .artistData .intro {
+  width: 150px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 17px;
+  color: #B0B0B0;
+}
+.main .more {
+  height: 25px;
+  width: 110px;
+  margin: 40px auto;
+  text-align: center;
+  font-size: 12px;
+  line-height: 25px;
+  color: #AEAEAE;
+  border: 1px solid #E0E0E0;
+}
+.main .mhzViewModels {
+  width: 1040px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  font-size: 12px;
+  color: #A6A6A6;
+  text-align: center;
+}
+.main .mhzViewModels .title {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main .mhzViewModels .mhzs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .mhzViewModels .mhzs .mhz {
+  width: 208px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main .mhzViewModels .mhzs .mhz .mhzName {
+  font-size: 14px;
+  color: #1C1C1C;
+}
+
+.main .collections {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 1130px;
+}
+.main .collections .collection {
+  flex: none;
+  width: calc(100% / 5);
+  box-sizing: border-box;
+  padding: 0 38px;
+  border-bottom: 1px solid #EAEAEA;
+  margin-bottom: 40px;
+}
+.main .collections .collection img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.main .collections .collection .name {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.main .collections .collection .master {
+  margin-bottom: 10px;
+}
+.main .collections .collection .master span {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #919191;
+  text-align: left;
+}
+.main .collections .collection .songs {
+  list-style: none;
+  margin-bottom: 6px;
+  padding-inline-start: 0;
+}
+.main .collections .collection .songs .song {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #919191;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+/*# sourceMappingURL=explore.css.map */

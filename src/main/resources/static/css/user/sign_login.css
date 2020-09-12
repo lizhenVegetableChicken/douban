@@ -1,0 +1,166 @@
+@charset "UTF-8";
+.main {
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 320px;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.main .title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main .return {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+.main .login-form {
+  width: 100%;
+}
+.main .login-form .input-content p {
+  margin-top: 0;
+}
+.main .login-form .input-content div {
+  width: 100%;
+}
+.main .login-form .input-content div input {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 0 9px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 36px;
+  color: #000000;
+  text-align: left;
+  width: 100%;
+  height: 36px;
+  margin-bottom: 27px;
+}
+.main .login-form .btn {
+  width: 100%;
+  height: 36px;
+  margin-bottom: 27px;
+  border: 0;
+  outline: none;
+}
+.main .login-form .btn button {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: #2F9842;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 27px;
+  color: white;
+  text-align: center;
+}
+.main .login-form .footer {
+  padding: 0 3px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .login-form .footer div {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 27px;
+  color: #000000;
+  text-align: center;
+}
+.main .result {
+  margin-top: 80px;
+}
+.main .result .notice {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
+  color: #000000;
+  text-align: center;
+  font-weight: 300;
+  font-family: 骞煎渾;
+}
+.main .result .btns {
+  width: 96px;
+  margin: 40px auto;
+  padding: 6px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2F9842;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 4px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.main .pwd-result {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.main .pwd-result .result-main {
+  position: absolute;
+  width: 200px;
+  height: 140px;
+  top: 170px;
+  left: 670px;
+  background: white;
+  border-radius: 10px;
+}
+.main .pwd-result .result-main .content {
+  margin-top: 10px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-align: center;
+  font-weight: 300;
+  font-family: 骞煎渾;
+}
+.main .pwd-result .result-main .content .pwd {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: -20px;
+}
+.main .pwd-result .result-main .btn {
+  width: 96px;
+  margin: 40px auto;
+  padding: 6px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2F9842;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 4px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=sign_login.css.map */

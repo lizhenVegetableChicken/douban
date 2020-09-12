@@ -1,0 +1,42 @@
+@mixin border() {
+  border: 1px solid black;
+}
+
+@mixin square ($s1, $s2:$s1) {
+  width: $s1;
+  height: $s2;
+}
+
+@mixin circle($size) {
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+}
+
+@mixin font($s1:12px, $s2:17px, $t:left, $c:#000000) {
+  font-family: 幼圆;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $s1;
+  line-height: $s2;
+  color: $c;
+  text-align: $t;
+}
+
+@mixin title() {
+  .title {
+    @include font(12px, 17px, left, #2F9842);
+    margin-bottom: 20px;
+    &::before {
+      content: "";
+      display: inline-block;
+      @include square(14px, 11px);
+      background: url(/images/start.png) no-repeat center / contain;
+      margin-right: 10px;
+    }
+  }
+}
+
+@mixin background($name) {
+  background: url(/images/#{$name}.png) no-repeat center / contain;
+}

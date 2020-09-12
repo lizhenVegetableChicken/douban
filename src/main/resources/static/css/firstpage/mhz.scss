@@ -1,0 +1,161 @@
+@import "../common.scss";
+
+.main{
+  display: block;
+  .mhz-line {
+    margin-left: 240px;
+    @include square(960px, 120px);
+    display: flex;
+    align-items: center;
+
+    .pic {
+      @include square(50px);
+      margin-right: 10px;
+
+      &.private {
+        @include background("muselect");
+      }
+
+      &.mine {
+        @include background("select");
+      }
+    }
+
+    .text {
+      position: relative;
+      @include font(14px, 18px, left, #000);
+      color: #000000;
+      margin-right: 55px;
+      .open {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        @include font(14px, 24px, center, #2F9842);
+        @include square(80px, 24px);
+        border: 1px solid #7ac989;
+        border-radius: 12px;
+      }
+      .intro {
+        @include font(12px, 16px, left, #BCBBBB);
+      }
+    }
+  }
+
+  .artists {
+    width: 1040px;
+    margin: 0 auto;
+    @include font(14px, 20px, left, #A6A6A6);
+    .title {
+      margin-bottom: 10px;
+
+      .pic {
+        display: inline-block;
+        @include square(15px, 17px);
+        margin-left: 10px;
+        @include background("artist");
+      }
+    }
+
+    .artistDatas {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .artistData {
+        @include square(208px, 267px);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 40px;
+        border-bottom: 1px solid #EFEFEF;
+
+        img, .cover {
+          @include square(120px);
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+        .cover {
+          position: absolute;
+          left: 44px;
+          &:hover .cb{
+            display: block !important;
+          }
+          .cb {
+            @include square(120px);
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            background: rgba(0,0,0,0.4);
+            .pic {
+              position: absolute;
+              @include background("Polygon2");
+              top: 48px;
+              left: 51px;
+              @include square(24px,18px);
+            }
+          }
+        }
+
+        .name {
+          @include font(14px, 20px, center);
+          margin-bottom: 10px;
+          cursor: pointer;
+        }
+
+        .intro {
+          width: 150px;
+          margin: 0 auto;
+          font-size: 12px;
+          line-height: 17px;
+          color: #B0B0B0;
+        }
+      }
+    }
+  }
+
+  .more {
+    @include square(110px, 25px);
+    margin: 40px auto;
+    @include font(12px, 25px, center, #AEAEAE);
+    border: 1px solid #E0E0E0;
+    cursor: pointer;
+  }
+
+  .mhzViewModels {
+    width: 1040px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    @include font(12px, 14px, center, #A6A6A6);
+
+    .title {
+      width: 100%;
+      text-align: left;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #EFEFEF;
+    }
+
+    .mhzs {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .mhz {
+        @include square(208px, 60px);
+        text-align: center;
+        line-height: 60px;
+        border-bottom: 1px solid #EFEFEF;
+
+        .mhzName {
+          font-size: 14px;
+          color: #1C1C1C;
+        }
+      }
+    }
+  }
+}

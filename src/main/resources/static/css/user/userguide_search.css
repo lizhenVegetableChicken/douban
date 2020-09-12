@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.search-main {
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  width: 1040px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 213px 100px 30px;
+}
+.search-main .return {
+  z-index: 1;
+  position: absolute;
+  top: 228px;
+  right: 100px;
+  cursor: pointer;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+}
+.search-main .form {
+  position: relative;
+  width: 100%;
+}
+.search-main .form .search input {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+  width: 788px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #E6E6E6;
+  border-radius: 50px;
+  padding: 0 58px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 50px;
+  color: #969696;
+  text-align: left;
+}
+.search-main .form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  top: 17px;
+  left: 30px;
+  background: url(/images/search.png) no-repeat center/contain;
+}
+.search-main .results {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.search-main .results span {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: red;
+  text-align: center;
+}
+.search-main .results .singer {
+  width: 100px;
+  margin: 0 20px;
+}
+.search-main .results .singer img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.search-main .results .singer .name {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.search-main .clickmore {
+  box-shadow: 0 4px 3px 3px rgba(0, 0, 0, 0.1);
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 28px;
+  color: #000000;
+  text-align: center;
+  width: 80px;
+  height: 28px;
+  border-radius: 10px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=userguide_search.css.map */

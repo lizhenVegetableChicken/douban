@@ -1,0 +1,52 @@
+@import "player.scss";
+@import "explore.scss";
+@import "../layout.scss";
+@import "../common.scss";
+
+.guide {
+  @include square(345px, 105px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    @include font(12px, 17px, center, #979797);
+    cursor: pointer;
+    &.mhz {
+      color: #2F9842;
+      .pic {
+        display: inline-block;
+        @include square(24px);
+        @include background("mhz");
+      }
+    }
+    &.col {
+      .pic {
+        display: inline-block;
+        @include square(17px);
+        margin-right: 5px;
+        @include background("col");
+      }
+    }
+    &.my {
+      .pic {
+        display: inline-block;
+        @include square(16px, 14px);
+        margin-right: 5px;
+        @include background("mine");
+      }
+    }
+    &.ser {
+      margin-right: 0;
+      .pic {
+        display: inline-block;
+        @include square(18px);
+        margin-right: 5px;
+        @include background("search");
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+    color: green;
+}
+
+.box{
+    width: 400px;
+    height: 600px;
+    margin:0 auto;
+    color: green;
+    line-height: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.dsbox {
+    width: 400px;
+    height: 500px;
+    margin:0 auto;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: center;*/
+    /*margin-top: 70px;*/
+}
+
+
+.sbox {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box>.sub{
+    margin-left: 150px;
+    width: 400px;
+
+}

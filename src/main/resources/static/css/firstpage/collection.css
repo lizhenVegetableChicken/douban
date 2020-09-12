@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.main .collections {
+  margin: 0 auto;
+  column-width: 1130px;
+  column-gap: 76px;
+  column-count: 5;
+}
+.main .collections .collection {
+  width: 150px;
+  border-bottom: 1px solid #EAEAEA;
+  margin-bottom: 40px;
+}
+.main .collections .collection img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.main .collections .collection .name {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.main .collections .collection .master {
+  margin-bottom: 10px;
+}
+.main .collections .collection .master span {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #919191;
+  text-align: left;
+}
+.main .collections .collection .songs {
+  list-style: none;
+  margin-bottom: 6px;
+  padding-inline-start: 0;
+}
+.main .collections .collection .songs .song {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #919191;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+/*# sourceMappingURL=collection.css.map */

@@ -1,0 +1,209 @@
+@charset "UTF-8";
+.userguide-main {
+  position: relative;
+  box-sizing: border-box;
+  width: 1040px;
+  margin: 0 auto;
+  padding: 110px 140px 0px;
+}
+.userguide-main .title {
+  width: 600px;
+  margin: 0 auto;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  color: #000;
+  text-align: center;
+}
+.userguide-main .small {
+  position: absolute;
+  right: 48px;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #2F9842;
+  text-align: left;
+  cursor: pointer;
+}
+.userguide-main .small::after {
+  content: "";
+  display: inline-block;
+  margin-left: 7px;
+  width: 8px;
+  height: 13px;
+  background: url(/images/Vector.png) no-repeat center/contain;
+}
+.userguide-main .singers {
+  margin-top: 60px;
+  width: 820px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.userguide-main .singers .singer {
+  position: relative;
+  margin-bottom: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+}
+.userguide-main .singers .singer img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.userguide-main .singers .singer .name {
+  margin-bottom: 10px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000;
+  text-align: center;
+}
+.userguide-main .singers .singer .like-btn {
+  width: 40px;
+  height: 20px;
+  border-radius: 2px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FF4874;
+  text-align: center;
+  border: 1px solid #FF4874;
+  cursor: pointer;
+  transition: .25s;
+}
+.userguide-main .singers .singer .like-btn:hover {
+  color: white !important;
+  background: #FF4874 !important;
+  transition: .25s;
+}
+.userguide-main .singers .singer .red {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #FF6C6A;
+  opacity: 0.8;
+}
+.userguide-main .singers .singer .red::after {
+  content: "";
+  width: 30px;
+  height: 22px;
+  position: absolute;
+  right: 35px;
+  top: 39px;
+  background: url(/images/choosen.png) no-repeat center/contain;
+}
+.userguide-main .options {
+  margin: 20px auto;
+  width: 140px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userguide-main .options div {
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #000000;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.userguide-main .options div:hover {
+  color: #2F9842;
+}
+.userguide-main .options div::before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 14px;
+  height: 13px;
+}
+.userguide-main .options div.change::before {
+  background: url(/images/change.png) no-repeat center/contain;
+}
+.userguide-main .options div.search::before {
+  background: url(/images/search.png) no-repeat center/contain;
+}
+.userguide-main .selected {
+  margin: 10px auto;
+  width: 300px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userguide-main .selected .p {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: not-allowed;
+  background: url(/images/avatar.png) no-repeat center/contain;
+}
+.userguide-main .selected .p .red {
+  content: "";
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #FF6C6A;
+  opacity: 0.8;
+}
+.userguide-main .selected .p .red::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  left: 19px;
+  top: 19px;
+  background: url(/images/del.png) no-repeat center/contain;
+}
+.userguide-main .skip {
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+  align-items: center;
+  justify-content: center;
+  height: 17px;
+  font-family: 骞煎渾;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #AEAEAE;
+  text-align: left;
+}
+.userguide-main .skip::after {
+  content: "";
+  margin-left: 7px;
+  display: inline-block;
+  width: 18px;
+  height: 13px;
+  background: url(/images/Vector2.png) no-repeat center/contain;
+}
+
+/*# sourceMappingURL=userguide.css.map */
