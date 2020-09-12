@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>userList</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+
+</head>
+<body class="container">
+<br/>
+<h1>播放列表</h1>
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>歌名</th>
+            <th>歌曲</th>
+            <!--<th>播放</th>-->
+            <!--<th>nickName</th>-->
+            <!--<th>regTime</th>-->
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--<tr th:each="user : ${users}">-->
+            <!--<th scope="row" th:text="${userStat.index + 1}">1</th>-->
+            <!--<td th:text="${user.userName}">neo</td>-->
+            <!--<td th:text="${user.passWord}">Otto</td>-->
+            <!--<td th:text="${user.email}">6</td>-->
+            <!--<td th:text="${user.nickName}">6</td>-->
+            <!--<td th:text="${user.regTime}">6</td>-->
+            <!--<td><a th:href="@{/toEdit(id=${user.id})}">edit</a></td>-->
+            <!--<td><a th:href="@{/delete(id=${user.id})}">delete</a></td>-->
+        <!--</tr>-->
+
+        <tr th:each="song : ${songPages}">
+            <div th:if="${not (song.getUrl()==null)}">
+                <th scope="row" th:text="${songStat.index + 1}">1</th>
+                <td th:text="${song.getName()}"></td>
+                <td><audio th:src="@{${song.getUrl()}}" controls="controls"></audio></td>
+                <!--<td th:unless="${(song.getUrl()==null)}">暂无该歌曲文件</td>-->
+                <!--<td th:text="${user.email}">6</td>-->
+                <!--<td th:text="${user.nickName}">6</td>-->
+                <!--<td th:text="${user.regTime}">6</td>-->
+                <td><a th:href="@{/crud/song_mod(id=${song.id})}">edit</a></td>
+                <td><a th:href="@{/delete/song_del(id=${song.id})}">delete</a></td>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="form-group">
+    <div class="col-sm-2 control-label">
+        <a  th:href="@{/crud/song_add}" class="btn btn-info">add</a>
+    </div>
+</div>
+
+<div class="modal-footer no-margin-top">
+    <ul class="pagination pull-right no-margin">
+
+        <!-- 首页 -->
+        <li>
+            <a th:href="'/list?pageNum=1'">首页</a>
+        </li>
+
+        <!-- 上一页 -->
+        <!--<li th:if="${users.hasPrevious()}">-->
+            <!--<a th:href="'/list?pageNum=' + ${users.previousPageable().getPageNumber()}" th:text="上一页"></a>-->
+        <!--</li>-->
+        <li th:if="${songPages.hasPrevious()}">
+            <a th:href="'/list?pageNum=' + ${songPages.previousPageable().getPageNumber()}" th:text="上一页"></a>
+        </li>
+
+        <!-- 中间页 -->
+        <!--<li th:each="pageNum:${#numbers.sequence(0, users.getTotalPages() - 1)}">-->
+            <!--<a th:href="'/list?pageNum=' + ${pageNum}" th:text="${pageNum + 1}" th:if="${pageNum ne users.pageable.getPageNumber()}"></a>-->
+            <!--<a th:href="'/list?pageNum=' + ${pageNum}" th:text="${pageNum + 1}" th:if="${pageNum eq users.pageable.getPageNumber()}" th:style="'font-weight:bold;background: #6faed9;'"></a>-->
+        <!--</li>-->
+        <li th:each="pageNum:${#numbers.sequence(1, songPages.getTotalPages())}">
+            <a th:href="'/list?pageNum=' + ${pageNum}" th:text="${pageNum + 1}" th:if="${pageNum ne songPages.pageable.getPageNumber()}"></a>
+            <a th:href="'/list?pageNum=' + ${pageNum}" th:text="${pageNum + 1}" th:if="${pageNum eq songPages.pageable.getPageNumber()}" th:style="'font-weight:bold;background: #6faed9;'"></a>
+        </li>
+
+        <!-- 下一页 -->
+        <!--<li th:if="${users.hasNext()}">-->
+            <!--<a th:href="'/list?pageNum=' + ${users.nextPageable().getPageNumber()}" th:text="下一页"></a>-->
+        <!--</li>-->
+        <li th:if="${songPages.hasNext()}">
+            <a th:href="'/list?pageNum=' + ${songPages.nextPageable().getPageNumber()}" th:text="下一页"></a>
+        </li>
+
+        <!-- 尾页 -->
+        <!--<li>-->
+            <!--<a th:href="'/list?pageNum=' + ${users.getTotalPages() - 1}">尾页</a>-->
+        <!--</li>-->
+        <li>
+            <a th:href="'/list?pageNum=' + ${songPages.getTotalPages()}">尾页</a>
+        </li>
+
+    </ul>
+</div>
+
+</body>
+</html>

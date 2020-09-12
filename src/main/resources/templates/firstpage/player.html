@@ -1,0 +1,48 @@
+<div th:fragment="player" xmlns:th="http://www.thymeleaf.org">
+    <div class="container">
+        <div class="QR">
+            <div class="pic"></div>
+            <p>下载豆瓣FM APP</p>
+            <p>让好音乐继续</p>
+        </div>
+        <div class="share-page" style="position: absolute;display: none;" th:include="user/share::share"></div>
+        <div class="main">
+            <div class="mhz-name">豆瓣精选 MHz</div>
+            <div class="title" th:text="${song.name}"></div>
+            <div class="song-artist">
+                <span th:each="singer:${singers}">[[${singer.name}]] </span>
+            </div>
+            <div class="play">
+                <div class="left">
+                    <span class="time">02:34</span>
+                    <span class="voice"></span>
+                </div>
+                <div class="right">
+                    <span class="pic p1"></span>
+                    <span class="pic p2"></span>
+                    <span class="pic p3 share-btn"></span>
+                </div>
+            </div>
+            <div class="keys">
+                <div class="left" >
+                    <span class="pic1 p1"></span>
+                    <span class="pic1 p2"></span>
+                </div>
+                <div class="mid">
+                    <span class="pic2 p3"></span>
+                    <span class="pic2 p4"></span>
+                </div>
+                <div class="right">
+                    <span class="pic1 p5"></span>
+                    <span class="pic1 p6"></span>
+                    <span class="pic1 p7"></span>
+                </div>
+            </div>
+            <div class="intro">
+                <span class="green">登录/注册 </span>
+                <span>后豆瓣FM将永久保留你的收听历史和喜好</span>
+            </div>
+        </div>
+        <img class="singer-picture" referrer="no-referrer|origin|unsafe-url" th:src="@{${song.cover}}" alt="封面">
+    </div>
+</div>

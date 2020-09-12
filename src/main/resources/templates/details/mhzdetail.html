@@ -1,0 +1,49 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/details/mhzdetail.css}" >
+<!--    <link rel="stylesheet" href="../static/css/details/mhzdetail.css" >-->
+    <title>mhzdetail</title>
+</head>
+<div th:replace="layout::header"></div>
+    <div class="mhz-main" th:fragment="mhzdetail">
+        <div class="share share-btn">分享</div>
+        <div class="return"><a th:href="@{'/index'}">首页</a></div>
+        <div class="share-page" style="position: absolute;display: none;" th:include="user/share::share"></div>
+        <section class="subject" >
+            <img th:src="@{${singer.avatar}}" alt="#">
+            <div class="name">[[${singer.name}]] 系</div>
+            <div class="like-btn">
+                <span class="like">喜欢 </span>
+                <span class="num">1314</span>
+            </div>
+        </section>
+        <section class="songs">
+            <div class="title">全部精选歌曲</div>
+            <div class="song" th:each="song,it:${songs}">
+                <img th:if="${song.cover}" th:src="@{${song.cover}}" alt="#">
+                <div class="name">[[${song.name}]]</div>
+            </div>
+            <div class="more">查看全部精选歌曲</div>
+        </section>
+        <section class="simSingers">
+            <div class="title">[[${singer.name}]] 系</div>
+            <div class="intro">该兆赫可能包含以下相似艺术家的歌曲</div>
+            <div class="singers">
+                <div class="singer" th:each="simSinger,it:${simSingers}">
+                    <img referrer="no-referrer|origin|unsafe-url" th:src="@{${simSinger.avatar}}" alt="#">
+                    <div class="name"><a th:text="${simSinger.name}" th:href="@{'/artist?artistId='+${simSinger.id}}"></a></div>
+                </div>
+            </div>
+        </section>
+    </div>
+<!--<div th:replace="layout::footer"></div>-->
+<script th:src="@{/js/mhzdetail.js}"></script>
+<script th:src="@{/js/qrcode-min.js}"></script>
+<script th:src="@{/js/sharebtn.js}"></script>
+<!--    <script src="../../static/js/mhzdetail.js"></script>-->
+</html>

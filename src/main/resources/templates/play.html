@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="song,it:${songs}">
+    <div th:if="${!(song.getUrl()==null)}">
+
+        <span th:text="${song.getName()}"></span>
+        <!--<span th:text="${song.getSingerIds()}"></span>-->
+        <audio th:src="@{${song.getUrl()}}" controls="controls"></audio>
+    </div>
+</div>
+
+</body>
+</html>

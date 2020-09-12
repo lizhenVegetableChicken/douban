@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/user/sign_login.css}" >
+    <title>FindPassword</title>
+</head>
+<body>
+<div class="main">
+    <div class="title">
+        <span>找回密码</span>
+    </div>
+    <div class="return"><a th:href="@{'/login'}">返回</a></div>
+    <div class="login-form">
+        <!--输入框-->
+        <div class="input-content">
+            <!--autoFocus-->
+            <div>
+                <input type="text" placeholder="输入用户名" class="name"/>
+            </div>
+            <p class="question"></p>
+            <div>
+                <input type="text" placeholder="输入答案" class="answer" />
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit" class="find-btn">找回密码</button>
+        </div>
+
+    </div>
+    <div class="pwd-result">
+        <div class="result-main"></div>
+    </div>
+</div>
+<script th:src="@{/js/findpwd.js}"></script>
+</body>
+</html>

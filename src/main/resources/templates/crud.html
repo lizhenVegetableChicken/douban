@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/manage.css}">
+</head>
+<body>
+
+<a th:href="@{/index}" style="position: sticky;display:block;width: 65px;margin: 0 auto" >返回主页</a>
+<div  th:if="${fail}" style="font-size:27px;position: sticky;display:block;width: 250px;margin: 0 auto;color: red;">
+    <span th:text="${fail}"></span>
+</div>
+
+<div th:if="${asong}">
+    <form class="box" action="#" th:action="@{/crud/songAdd}" th:object="${asong}" method="post">
+        <div>歌曲编号：<input type="text" th:field="*{id}"/></div>
+        <div>歌曲名称：<input type="text" th:field="*{name}"/></div>
+        <div>歌曲歌词：<input type="text" th:field="*{lyrics}"/></div>
+        <div>歌曲地址：<input type="file" th:field="*{url}"></div>
+        <div><input type="submit"/></div>
+    </form>
+
+</div>
+
+<div th:if="${msong}">
+    <form class="box" action="#" th:action="@{/crud/songModify}" th:object="${msong}" method="post">
+        <div>歌曲编号：<input type="text" th:field="*{id}"/></div>
+        <div>歌曲名称：<input type="text" th:field="*{name}"/></div>
+        <div>歌曲歌词：<input type="text" th:field="*{lyrics}"/></div>
+        <div>歌曲地址：<input type="text" th:field="*{url}"></div>
+        <div><input type="submit"/></div>
+    </form>
+</div>
+
+<div th:if="${dsong}">
+    <form class="box" action="#" th:action="@{/crud/songDelete}" th:object="${dsong}" method="post">
+        <div>歌曲编号：<input type="text" th:field="*{id}"/></div>
+        <div>歌曲名称：<input type="text" th:field="*{name}"/></div>
+        <div>歌曲歌词：<input type="text" th:field="*{lyrics}"/></div>
+        <div>歌曲地址：<input type="text" th:field="*{url}"></div>
+        <div><input type="submit"/></div>
+    </form>
+</div>
+
+<div th:if="${asinger}">
+    <form class="box" action="#" th:action="@{/crud/singerAdd}" th:object="${asinger}" method="post">
+        <div>歌手编号：<input type="text" th:field="*{id}"/></div>
+        <div>歌手名称：<input type="text" th:field="*{name}"/></div>
+        <div>头像地址：<input type="text" th:field="*{avatar}"/></div>
+        <div><input type="submit"/></div>
+    </form>
+</div>
+
+<div th:if="${msinger}">
+    <form class="box" action="#" th:action="@{/crud/singerModify}" th:object="${msinger}" method="post">
+        <div>歌手编号：<input type="text" th:field="*{id}"/></div>
+        <div>歌手名称：<input type="text" th:field="*{name}"/></div>
+        <div>头像地址：<input type="text" th:field="*{avatar}"/></div>
+        <div><input type="submit"/></div>
+    </form>
+</div>
+
+<div th:if="${asubject}">
+    <form class="box" action="#" th:action="@{/crud/subjectAdd}" th:object="${asubject}" method="post">
+
+        <div>主题编号：<input type="text" th:field="*{id}"/></div>
+        <div>主题名称：<input type="text" th:field="*{name}"/></div>
+        <div>封面地址：<input type="text" th:field="*{cover}"/></div>
+        <div>
+            一级分类：
+            <label><input type="radio" name="subjectType" th:field="*{subjectType}" value="mhz"/>赫兹</label>
+            <label><input type="radio" name="subjectType" th:field="*{subjectType}" value="collection"/>歌单</label>
+        </div>
+        <div class="sbox">
+            <div class="sub">二级分类：</div>
+            <div>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="artist"/>艺术家</label>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="mood"/>心情/场景</label>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="age"/>语言/年代</label>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="style"/>风格/流派</label>
+            </div>
+        </div>
+        <div><input type="submit"/></div>
+    </form>
+</div>
+
+<div th:if="${msubject}">
+    <form class="box" action="#" th:action="@{/crud/singerModify}" th:object="${msubject}" method="post">
+        <div>主题编号：<input type="text" th:field="*{id}"/></div>
+        <div>主题名称：<input type="text" th:field="*{name}"/></div>
+        <div>封面地址：<input type="text" th:field="*{cover}"/></div>
+        <div>
+            一级分类：
+            <label><input type="radio" name="subjectType" th:field="*{subjectType}" value="mhz"/>赫兹</label>
+            <label><input type="radio" name="subjectType" th:field="*{subjectType}" value="collection"/>歌单</label>
+        </div>
+        <div class="sbox">
+            <div class="sub">二级分类：</div>
+            <div>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="artist"/>艺术家</label>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="mood"/>心情/场景</label>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="age"/>语言/年代</label>
+                <label><input type="radio" name="subjectType" th:field="*{subjectSubType}" value="style"/>风格/流派</label>
+            </div>
+        </div>
+        <div><input type="submit"/></div>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

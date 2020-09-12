@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  th:href="@{/css/manage.css}">
+</head>
+<body>
+<div th:if="${success}" style="font-size:27px;color: blue;position: sticky;display:block;width: 250px;margin: 0 auto" >
+    <span th:text="${success}"></span>
+</div>
+<div class="box">
+
+    <a th:href="@{song_add}">增加歌曲</a>
+    <a th:href="@{song_modify}">修改歌曲</a>
+    <a th:href="@{song_delete}">删除歌曲</a>
+
+    <a th:href="@{singer_add}">增加歌手</a>
+    <a th:href="@{singer_modify}">修改歌手</a>
+    <a th:href="@{singer_delete}">删除歌手</a>
+
+    <a th:href="@{subject_add}">增加科目</a>
+    <a th:href="@{subject_modify}">修改科目</a>
+    <a th:href="@{subject_delete}">删除科目</a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../static/css/explore.css" >
+    <title>Mhz</title>
+</head>
+<body>
+    <div th:fragment="mhz">
+        <div class="main">
+        <div class="mhz-line">
+            <div class="pic private"></div>
+            <div class="text">
+                <span class="open"><a th:href="@{'/userguide'}">去开启</a></span>
+                <p>我的私人兆赫</p>
+                <p class="intro">豆瓣FM会根据你的喜好来推荐歌曲，让你与喜欢的音乐不期而遇</p>
+            </div>
+            <div class="pic mine"></div>
+            <div class="text">
+                <p>豆瓣精选兆赫</p>
+                <p class="intro">汇聚各种音乐风格的精选兆赫，从这里开始音乐漫游吧</p>
+            </div>
+        </div>
+        <div class="artists">
+            <div class="title">
+                <span>从艺术家出发</span>
+                <span class="pic"></span>
+            </div>
+            <div class="artistDatas">
+                <div class="artistData" th:each="artistData,it:${artistDatas}">
+                    <a style="text-decoration: none" th:href="@{/list}"><div class="cover"><div class="cb"><div class="pic"></div></div></div>
+                    <img th:src="@{${artistData.cover}}" alt="#"></a>
+                    <div class="name" ><a th:text="${artistData.name}" th:href="@{'/artist?artistId='+${artistData.artistId}}"></a></div>
+                    <div class="intro" th:text="${artistData.description}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="more">发现更多兆赫</div>
+        <div class="mhzViewModels" th:each="mhzViewModel:${mhzViewModels}">
+            <div class="title" th:text="${mhzViewModel.title}"></div>
+            <div class="mhzs">
+                <div class="mhz" th:each="mhz:${mhzViewModel.subjects}">
+                    <a style="text-decoration: none" th:href="@{/list}"><span class="mhzName" th:text="${mhz.name}"></span><span> Mhz</span></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

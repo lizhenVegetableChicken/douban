@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/firstpage/explore.css" >
+    <title>explore</title>
+</head>
+<body>
+<div th:fragment="explore" xmlns:th="http://www.thymeleaf.org">
+    <div class="mhz-part" th:include="firstpage/mhz::mhz"></div>
+    <div class="collection-part" style="display: none" th:include="firstpage/collection::collection"></div>
+    <div class="my-part" style="display: none" th:include="firstpage/my::my"></div>
+    <div class="search-part" style="display: none" th:include="firstpage/first-search::search"></div>
+</div>
+</body>
+</html>

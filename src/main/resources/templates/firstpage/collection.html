@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/firstpage/collection.css}" >
+    <!--<link rel="stylesheet" th:href="@{/css/firstpage/index.css}" >-->
+
+    <!--<link rel="stylesheet" href="../static/css/firstpage/collection.css" >-->
+    <title>Collections</title>
+</head>
+<body>
+
+<div th:fragment="collection">
+    <div class="main">
+        <div class="collections">
+            <div class="collection" th:each="collection,it:${collections}" th:if="${it.count<11}">
+                <img th:src="@{${collection.cover}}" alt="#">
+                <div class="name"><a th:href="@{'/collectiondetail?subjectId='+${collection.id}}"><span th:text="${collection.name}"></span></a></div>
+                <div class="master"><span>[[${collection.master}]] 创建</span></div>
+                <ul class="songs">
+                    <li class="song" th:each="info,it:${collection.songInfos}">
+                        <span>[[${info}]]</span>
+                    </li>
+                    <li class="tail">曲目 [[${collection.songsCount}]] 收藏 [[${collection.collectedCount}]]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/user/sign_login.css}" >
+<!--        <link rel="stylesheet" href="../static/css/user/sign_login.css" >-->
+    <title>Sign</title>
+</head>
+<body>
+<div class="main">
+    <div class="title">
+        <span>注册</span>
+    </div>
+    <div class="return"><a th:href="@{'/login'}">返回</a></div>
+    <form class="login-form" action="/register" method="post" name="user">
+        <!--输入框-->
+        <div class="input-content">
+            <!--autoFocus-->
+            <div>
+                <input type="text" placeholder="请输入用户名" name="loginName"/>
+            </div>
+
+            <div>
+                <input type="text" placeholder="请输入密码" name="password" />
+            </div>
+
+            <div>
+                <input type="text" placeholder="请输入手机号" name="mobile" />
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit" class="enter-btn" th:href="@{'/result/sign'}">注册</button>
+        </div>
+        
+    </form>
+
+</div>
+</body>
+</html>

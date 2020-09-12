@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <header th:fragment="header">
+        <div class="logo"></div>
+        <div class="text mid">下载豆瓣FM APP · 我要反馈</div>
+        <div class="text"><a th:href="@{'/login'}">登录 I 注册</a></div>
+    </header>
+
+    <footer th:fragment="footer">
+        <div class="bottom">
+            <div><span>2019 douban <a>京IC备案11027288号</a> 网络视听许可证0110418号 京公网安备110105012274 新出发京批字直接150126号 </span></div>
+            <div><span>违法和不良信息举报 电话：17610209667 邮箱：doubannvgroup.cn</span></div>
+            <div><span>广告合作：adfm@douban.com FM用户手册 新版说明 我要反馈 豆瓣FM中心</span></div>
+        </div>
+    </footer>
+</body>
+</html>

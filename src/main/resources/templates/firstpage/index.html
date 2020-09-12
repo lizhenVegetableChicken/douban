@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/firstpage/index.css}" >
+    <title>Index</title>
+</head>
+<body>
+    <div class="header" th:replace="layout::header"></div>
+    <div class="player" th:include="firstpage/player::player" ></div>
+    <div class="guide">
+        <div class="mhz"><span class="pic"></span><span>兆赫</span></div>
+        <div class="col"><span class="pic"></span><span>歌单</span></div>
+        <div class="my"><span class="pic"></span><span>我的</span></div>
+        <div class="ser"><span class="pic"></span><span>搜索</span></div>
+    </div>
+    <div class="explore" th:include="firstpage/explore::explore" ></div>
+    <div class="footer" th:replace="layout::footer"></div>
+    <div><a th:href="@{/crud/manage}" style="text-decoration: none; color:orange; font-size: 25px; margin: 0 auto; margin-left: 700px;"  >后台</a></div>
+    <script th:src="@{/js/index.js}"></script>
+    <script th:src="@{/js/qrcode-min.js}"></script>
+    <script th:src="@{/js/sharebtn.js}"></script>
+    <script th:src="@{/js/mhz.js}"></script>
+    <script th:src="@{/js/index_search.js}"></script>
+    <!--    <script src="../static/js/index.js"></script>-->
+</body>
+</html>

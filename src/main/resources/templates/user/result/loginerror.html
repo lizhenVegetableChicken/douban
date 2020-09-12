@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" th:href="@{/css/user/sign_login.css}" >
+    <title>LoginResult</title>
+</head>
+<body>
+    <div class="main">
+        <div class="result">
+            <div class="notice">登陆失败</div>
+            <div class="btns"><a th:href="@{'/login'}">重新登录</a></div>
+        </div>
+    </div>
+</body>
+</html>
